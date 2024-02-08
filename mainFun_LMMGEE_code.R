@@ -1,3 +1,9 @@
+suppressPackageStartupMessages(library(MASS, quietly = T))
+suppressPackageStartupMessages(library(lmerTest, quietly = T))
+suppressPackageStartupMessages(library(geepack, quietly = T))
+
+
+
 longFun = function(Y, X, M, COV = NULL, id, wave, topN = NULL,
                    method = c("lme", "gee"), family, verbose = F){
   ## longitudinal method, based on linear mixed model or generalized estimating equation
